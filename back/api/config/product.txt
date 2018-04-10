@@ -1,0 +1,44 @@
+﻿{
+    "api":"back/product.php",
+    "cols":"*",
+    "filterCols":"foodId,Category,CategoryId,eg1,eg3,foodImg",
+    "multiple":true,
+    "dictionary":{
+        "cn":{
+            "addTime":"上架时间"
+        }
+    },
+    "filterData":{
+        "addTime":{
+            "type":"DateFormat",
+            "format":"yyyy/MM/dd hh:mm:ss"
+        },
+        "phone":{
+            "type":"Regplace",
+            "reg":"(\\d{3}).+(\\d{4})",
+            "replaceVal":"$1****$2"
+        },
+        "brand":{
+            "type":"Regplace",
+            "reg":"(.).+",
+            "replaceVal":"$1**"
+        },
+        "Price":{
+            "type":"Regplace",
+            "reg":"元",
+            "replaceVal":"￥"
+        }
+    },
+    "pagination":{
+        "pageitems":10
+    },
+    "search":{
+        "show":true,
+        "api":"config/productAttr.txt"
+    },
+    "operate": true,
+    "add":{
+        "show":true
+    },
+    "UUID":"foodId"
+}

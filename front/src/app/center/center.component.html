@@ -1,0 +1,59 @@
+<header>
+  <app-header Title="个人中心" Back="order"></app-header>
+</header>
+<div class="center">
+  <div class="ct-top">
+    <span class="touxiang">
+      <i class="iconfont icon-gerenzhongxin" (click)="handleBack()"></i>
+    </span>
+    <h3>{{userInfo}}</h3>
+    <p>好吃的在哪里，我就在哪里</p>
+    <ul class="ctul">
+      <li (click)="toDiscount()">
+        <i class="iconfont icon-youhuiquan"></i>
+        <span>优惠券</span>
+      </li>
+      <li>
+        <i class="iconfont icon-membership-card_icon"></i>
+        <span>会员卡</span>
+      </li>
+      <li>
+        <i class="iconfont icon-gifts"></i>
+        <span>积分</span>
+      </li>
+    </ul>
+  </div>
+  <el-button [plain]="true" (click)="handle('info','success')">退出账户</el-button>
+  <!-- <el-button [plain]="true" (click)="handle()">退出账户</el-button> -->
+  
+  <div class="ct-bt"> 
+    <el-collapse [model]="[1]">
+      <el-collapse-item label="关于我们" value="1">
+    
+        <ng-template #label>
+           关于我们
+          <i class="header-icon el-icon-information"></i>
+        </ng-template>
+    
+        <div>吃最好的餐，点最方便的餐</div>
+        <div>阿婆私房菜贯彻简洁，以易用性为主的设计理念。让进店点餐的顾客无论是大人还是小孩乃至老人，都能够顺利、迅速地完成微信点餐，享用美食。</div>
+        <div> 无论是围餐的先食后付，或简餐的先付后食，我们都支持顾客微信支付宝买单。对于顾客省去了排队等待的时间。对店里减轻了收银压力、提升了翻台效率。</div>
+      </el-collapse-item>
+      <el-collapse-item label="意见反馈" value="2">
+        <div>广州阿婆私房菜食品网络技术有限公司</div>
+        <div>电话：020 38493455</div>
+        <div>QQ：3160462157</div>
+        <div>邮箱：mkt@sz8.cn</div>
+        <div>地址：广州市天河区智汇兆联创意产业园E栋5楼501房</div>
+      </el-collapse-item>
+      <el-collapse-item label="设置" value="3">
+        <div>简维护中,敬请期待ing......</div>
+      </el-collapse-item>
+    </el-collapse>    
+  </div>
+  <div class="footer">
+    <app-public-menus></app-public-menus>
+  </div>    
+</div>
+
+

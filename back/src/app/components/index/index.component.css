@@ -1,0 +1,39 @@
+:host ::ng-deep .logo {
+  width: 120px;
+  height: 31px;
+  border-radius: 6px;
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+.header_layout{
+    color:white;
+    font-size: 20px;
+}
+.layout .ant-layout {
+    background: white;
+}
+.container{
+    margin:20px;
+}
+.header_right{
+    float:right;
+
+}
+.header_layout{
+    width:600px;
+    display: inline-block;
+}
+.header_layout span{
+    font-size: 14px;
+    color: rgb(226, 225, 218);
+    margin-left: 10px;
+}
+.layout{
+    min-width: 880px;
+}
+
+
+
+
+
+
